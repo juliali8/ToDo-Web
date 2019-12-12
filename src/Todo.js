@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import './Todo.css';
+import TodoItem from "./TodoItem"
 
 class Todo extends Component {
     render() {
+        const { items, handleDelete, handleCheck } = this.props
+        // console.log(items);
         return (
-            <div id="5d966710-1c0a-11ea-bd9d-eb7e199293e6" className="todo">
-                <button className="check"></button>
-                <p>first thing to do</p>
-                <button className="delete">X</button>
+            <div>
+                {items.map(item => {
+                    return <TodoItem key={item.title} title={item.title} handleDelete={()=>handleDelete(item.title)} handleCheck={handleCheck}/>;
+                })}
             </div>
-        );
+        )
     }
 }
 

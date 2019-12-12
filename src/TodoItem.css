@@ -110,10 +110,3 @@ body {
 .delete:hover{
   color: #E8DBCD;
 }
-
-.sort_button {
-    display: block;
-    width: 200px;
-    margin: auto;
-    margin-bottom: 20px;
-}
